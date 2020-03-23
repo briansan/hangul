@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hangul
+  labels:
+    app: hangul
+spec:
+  selector:
+    matchLabels:
+      app: hangul
+  template:
+    metadata:
+      name: hangul
+      labels:
+        app: hangul
+    spec:
+      containers:
+      - name: hangul
+        image: beekay24/hangul
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hangul
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: hangul
