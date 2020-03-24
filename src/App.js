@@ -43,9 +43,7 @@ export default class App extends React.Component {
         message: "Unlocked Level " + next,
         unlockedLevel: next,
       })
-    } else {
-      this.setState({message: ""})
-    }
+    } 
   }
 
   descLevel = () => {
@@ -62,6 +60,7 @@ export default class App extends React.Component {
     this.setState({
       level: this.state.level + 1,
       counter: 1,
+      message: "",
     })
   }
 
