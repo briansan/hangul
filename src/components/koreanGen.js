@@ -31,10 +31,10 @@ export default class KoreanGenerator extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<center>
 			  <button onClick={this.gen}>Generate Korean Character</button>
 			  <h1>{this.state.character}</h1>
-			</div>
+			</center>
 		)
 	}
 }
