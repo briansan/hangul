@@ -49,9 +49,10 @@ export default class App extends React.Component {
   descLevel = () => {
     var msg = ["", 
       "Level 1: Single consonants and single vowels", 
-      "Level 2: Level 1 + Double (accented) consonants",
-      "Level 3: Level 2 + Double vertical vowels",
+      "Level 2: Level 1 + accented consonants",
+      "Level 3: Level 2 + double vertical vowels",
       "Level 4: Level 3 + horizontal and vertical vowels",
+      "Level 5: Level 4 + single consonant on the bottom",
     ][this.state.level]
     alert(msg)
   }
